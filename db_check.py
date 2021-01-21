@@ -25,7 +25,7 @@ def check_result_send_mess():
     results.append(resultsPage3)
     
     for item in results:
-        if href in item 
+        if 'href' in item 
             car_exists = cars_db.execute('SELECT car FROM cars WHERE car = %s', [item['href']])
             
             if len(cars_db.fetchall()) != 1:
