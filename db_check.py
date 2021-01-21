@@ -5,7 +5,7 @@ import message
 import crawl
 
 def check_result_send_mess():
-    chat_id = '@mpvsuranbot'
+    chat_id = 714481749
     container_class_name = 'contenedor-imagen'
 
     try:

@@ -4,7 +4,7 @@ import time
 
 # schedule crawler
 schedule
-schedule.every(30).minutes.do(db_check.check_result_send_mess)
+schedule.every(1).seconds.do(db_check.check_result_send_mess)
 
 # run script infinitely
 while True:
