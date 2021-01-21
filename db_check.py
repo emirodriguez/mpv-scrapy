@@ -18,11 +18,9 @@ def check_result_send_mess():
         
     results = crawl.crawling('https://www.maspocovendo.com/buscar/suran', container_class_name)
 
-    resultsPage2 = crawl.crawling('https://www.maspocovendo.com/buscar/suran?page=2', container_class_name)
-    results.append(resultsPage2)
+    results += crawl.crawling('https://www.maspocovendo.com/buscar/suran?page=2', container_class_name)
 
-    resultsPage3 = crawl.crawling('https://www.maspocovendo.com/buscar/suran?page=3', container_class_name)
-    results.append(resultsPage3)
+    results += crawl.crawling('https://www.maspocovendo.com/buscar/suran?page=3', container_class_name)
     
     for item in results:
         if not item:
