@@ -11,6 +11,6 @@ def crawling(website_link, link_class):
     carLinks = []
 
     for container in carsContainer:
-        carLinks.append(container.a)
+        carLinks.append('https://www.maspocovendo.com' + container.a)
     
     return carLinks
