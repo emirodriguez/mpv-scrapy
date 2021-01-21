@@ -25,12 +25,12 @@ def check_result_send_mess():
     results.append(resultsPage3)
     
     for item in results:
-        car_exists = cars_db.execute('SELECT car FROM cars WHERE car = %s', [item.text])
+        car_exists = cars_db.execute('SELECT car FROM cars WHERE car = %s', [item['href']])
         
         if len(cars_db.fetchall()) != 1:
             mess_content = 'https://www.maspocovendo.com' +  item['href']
             message.send_message(chat_id, mess_content)
-            cars_db.execute('INSERT INTO cars (car) VALUES (%s);', [item.text])
+            cars_db.execute('INSERT INTO cars (car) VALUES (%s);', [item['href']])
             conn.commit()
         else:
             continue
